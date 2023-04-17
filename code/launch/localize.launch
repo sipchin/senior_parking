@@ -1,0 +1,13 @@
+<launch>
+
+	<!-- Run the map server --> 
+    <node name="map_server" pkg="map_server" type="map_server" args="$(find robot2_description)/map/test_odom.yaml"/>
+
+	<!-- Add transformations. -->
+
+	<node pkg="tf" type="static_transform_publisher" name="link_to_laser_bc" args="0 0 0 0 0 0 base_link laser_frame 100"/>
+
+
+    
+</launch>
+
